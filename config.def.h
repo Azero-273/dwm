@@ -28,7 +28,7 @@ static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#4d4d4d";
+static const char col_cyan[]        = "#40454f";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -82,7 +82,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "rofi", "-no-lazy-grab", "-show", "drun", "-modi", "drun", NULL };
 static const char *termcmd[]  = { "wezterm", NULL };
 
-static const Key keys[] = {
+static const Key keys[] = { //
 	/* modifier                     key        function        argument */
 	{ ALTKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
@@ -92,6 +92,7 @@ static const Key keys[] = {
 	{ 0,	     	XF86XK_MonBrightnessUp,	   spawn, 	   SHCMD("light -A 1 ") },
 	{ 0,	     XF86XK_MonBrightnessDown,	   spawn,	   SHCMD("light -U 1 ") },
 	{ 0,						XK_Print,	   spawn,	   SHCMD("flameshot gui")  },
+	{ MODKEY,						XK_e,	   spawn,	   SHCMD("nautilus")  },
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[3] } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
