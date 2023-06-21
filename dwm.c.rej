@@ -1,0 +1,10 @@
+--- dwm.c
++++ dwm.c
+@@ -119,7 +110,6 @@ struct Monitor {
+ 	int by;               /* bar geometry */
+ 	int mx, my, mw, mh;   /* screen size */
+ 	int wx, wy, ww, wh;   /* window area  */
+-	Gap *gap;
+ 	unsigned int seltags;
+ 	unsigned int sellt;
+ 	unsigned int tagset[2];
