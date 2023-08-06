@@ -86,9 +86,9 @@ static const Key keys[] = { //
 	/* modifier                     key        function        argument */
 	{ ALTKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ 0,		     	XF86XK_AudioMute,	   spawn,	   SHCMD("./changeVolume toggle") },
-	{ 0,	      	XF86XK_AudioLowerVolume,   spawn,	   SHCMD("./changeVolume 1dB- unmute") },
-	{ 0,	      	XF86XK_AudioRaiseVolume,   spawn,	   SHCMD("./changeVolume 1dB+ unmute ") },
+	{ 0,		     	XF86XK_AudioMute,	   spawn,	   SHCMD("changeVolume toggle") },
+	{ 0,	      	XF86XK_AudioLowerVolume,   spawn,	   SHCMD("changeVolume 1dB- unmute") },
+	{ 0,	      	XF86XK_AudioRaiseVolume,   spawn,	   SHCMD("changeVolume 1dB+ unmute ") },
 	{ 0,	     	XF86XK_MonBrightnessUp,	   spawn, 	   SHCMD("light -A 1 ") },
 	{ 0,	     XF86XK_MonBrightnessDown,	   spawn,	   SHCMD("light -U 1 ") },
 	{ 0,						XK_Print,	   spawn,	   SHCMD("flameshot gui")  },
