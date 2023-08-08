@@ -86,7 +86,7 @@ static const Key keys[] = { //
 	/* modifier                     key        function        argument */
 	{ ALTKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ 0,		     	XF86XK_AudioMute,	   spawn,	   SHCMD("changeVolume toggle") },
+	{ 0,		     	XF86XK_AudioMute,	   spawn,	   SHCMD("changeVolume toggle && amixer sset Speaker unmute && amixer sset Headphone unmute") },
 	{ 0,	      	XF86XK_AudioLowerVolume,   spawn,	   SHCMD("changeVolume 1dB- unmute") },
 	{ 0,	      	XF86XK_AudioRaiseVolume,   spawn,	   SHCMD("changeVolume 1dB+ unmute ") },
 	{ 0,	     	XF86XK_MonBrightnessUp,	   spawn, 	   SHCMD("light -A 1 && dunstify -a backlight -r 2593 -u low -h int:value:\"$(light -G)\" \"亮度: $(light -G)%\" ") },
